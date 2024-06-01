@@ -9,7 +9,7 @@ client = OpenAI(api_key = OPENAI_API_KEY)
 
 # Función que maneja el comando /start
 async def start(update: Update, context: CallbackContext) -> None:
-    await update.message.reply_text('Hola! Soy tu bot de Telegram.')
+    await update.message.reply_text('"¡Hola! Soy ChartCheck, tu asistente para verificar la autenticidad y precisión de gráficos. Estoy aquí para ayudarte a garantizar que tus datos visuales sean precisos y confiables. Enviame la URL de la image que deseas analizar')
 
 # Función que maneja los mensajes de texto
 async def echo(update: Update, context: CallbackContext) -> None:
