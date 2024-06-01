@@ -6,5 +6,5 @@
 
 - **Detección de Errores**: Identifica problemas comunes en las visualizaciones, como errores de escala, inconsistencias en los datos y mala elección de tipos de gráficos.
 - **Sugerencias de Mejora**: Proporciona recomendaciones sobre cómo corregir los errores detectados y mejorar la visualización general de los datos.
-- **Interfaz Amigable**: Fácil de usar, con una interfaz intuitiva que guía al usuario a través del proceso de análisis.
-- **Integración con Herramientas Populares**: Compatible con herramientas de visualización de datos populares como Tableau, Power BI, y más.
+- **Interfaz Amigable**: Fácil de usar, con una interfaz intuitiva que guía al usuario a través del proceso de análisis en Telegram.
+
