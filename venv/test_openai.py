@@ -28,6 +28,7 @@ response = client.chat.completions.create(
         Proporciona ejemplos específicos de problemas identificados en la imagen.
         Mantén la respuesta corta, no más de 100 palabras. 
         Al final del análisis, sugiere posibles correcciones o mejoras.
+        Si no encontrás ningun problema, simplemente devolvé el número 0 (sin ningún otro texto de respuesta).
 
         # Ejemplo de problemas a buscar:
 
@@ -36,6 +37,7 @@ response = client.chat.completions.create(
         Uso inapropiado de colores (por ejemplo, paletas continuas para variables categóricas).
         Falta de leyendas, etiquetas o títulos.
         Exageración visual de diferencias pequeñas.
+         
 
         """},
         {

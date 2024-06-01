@@ -9,7 +9,11 @@ client = OpenAI(api_key = OPENAI_API_KEY)
 
 # Función que maneja el comando /start
 async def start(update: Update, context: CallbackContext) -> None:
-    await update.message.reply_text('"¡Hola! Soy ChartCheck, tu asistente para verificar la autenticidad y precisión de gráficos. Estoy aquí para ayudarte a garantizar que tus datos visuales sean precisos y confiables. Enviame la URL de la image que deseas analizar')
+    await update.message.reply_text("""Hola! Soy *ChartCheck*, tu asistente para verificar la calidad e integridad de tus visualizaciones. 
+                                    
+Estoy aquí para ayudarte a mejorar tus gráficos. 
+                                    
+Envíame la URL de la visualización que deseas analizar. """, parse_mode='Markdown')
 
 # Función que maneja los mensajes de texto
 async def echo(update: Update, context: CallbackContext) -> None:
@@ -54,7 +58,6 @@ async def echo(update: Update, context: CallbackContext) -> None:
         Mantén la respuesta corta, no más de 100 palabras.
         Al final del análisis, sugiere posibles correcciones o mejoras.
 
-
         # Ejemplo de problemas a buscar:
 
 
@@ -78,10 +81,11 @@ async def echo(update: Update, context: CallbackContext) -> None:
     max_tokens=300,
     )
 
-    respuesta_usuario = response.choices[0].message.content
+    respuesta_usuario = "Aquí está el análisis: \n\n" + response.choices[0].message.content
+
     print(respuesta_usuario)
 
-    await update.message.reply_text(respuesta_usuario)
+    await update.message.reply_text(respuesta_usuario, parse_mode='Markdown')
 
 def main() -> None:
     # Token del bot
